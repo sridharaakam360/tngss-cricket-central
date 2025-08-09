@@ -17,7 +17,7 @@ const Index = () => {
         }}
       />
 
-      {/* Hero */}
+      {/* Hero Banner */}
       <section className="relative">
         <div className="absolute inset-0">
           <img
@@ -31,39 +31,79 @@ const Index = () => {
         <div className="container max-w-[1200px] mx-auto relative z-10 flex items-center h-[420px] md:h-[520px]">
           <div className="max-w-2xl text-primary-foreground">
             <h1 className="text-4xl md:text-5xl font-bold mb-3">TNGSS Startup Cricket League</h1>
-            <p className="text-base md:text-lg opacity-90 mb-6">Two categories. One champion. Professional, high-energy cricket for startups and pros in Tamil Nadu.</p>
+            <p className="text-base md:text-lg opacity-90 mb-6">Where Startups Meet Sport</p>
             <div className="flex gap-3">
-              <Link to="/event-launch" className="inline-flex items-center px-5 py-2.5 rounded-md bg-primary text-primary-foreground hover:opacity-90 transition-colors">Event Launch</Link>
-              <Link to="/schedule" className="inline-flex items-center px-5 py-2.5 rounded-md border border-border bg-background text-foreground hover:bg-card transition-colors">View Schedule</Link>
+              <Link to="/event-launch" className="inline-flex items-center px-6 py-3 rounded-md bg-primary text-primary-foreground hover:opacity-90 transition-colors font-medium">Register Your Team</Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* About */}
+      {/* About the League */}
       <section className="container max-w-[1200px] mx-auto py-12">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-8">About the League</h2>
+          <div className="bg-card border border-border rounded-lg p-8 shadow-sm">
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              The TNGSS Startup Cricket League is an exciting initiative by Tamil Nadu Global Startup Summit 
+              (TNGSS), combining innovation with cricket. This statewide league features two unique categories:
+            </p>
+            <ul className="mt-6 space-y-3">
+              <li className="flex items-start gap-3">
+                <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+                <span className="text-muted-foreground">
+                  <strong className="text-foreground">Startup Category</strong> – for startup founders, co-founders, early team members, and ecosystem professionals.
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+                <span className="text-muted-foreground">
+                  <strong className="text-foreground">Professional Category</strong> – for professional cricket players, corporate athletes, and startup mentors.
+                </span>
+              </li>
+            </ul>
+            <p className="text-lg text-muted-foreground leading-relaxed mt-6">
+              Our mission is to promote startup energy, networking, and mentorship through the spirit of the sport.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* League Categories */}
+      <section className="container max-w-[1200px] mx-auto py-12">
+        <h2 className="text-3xl font-bold text-center mb-8">League Categories</h2>
         <div className="grid md:grid-cols-2 gap-8">
-          <article className="bg-card border border-border rounded-lg p-6 shadow-sm">
-            <h2 className="text-2xl font-semibold mb-2">About the League</h2>
-            <p className="text-muted-foreground">TNGSS Startup Cricket League brings together entrepreneurs and professionals for a competitive, well-run tournament with fair play and great fan experiences.</p>
+          <article className="bg-card border border-border rounded-lg p-8 shadow-sm">
+            <h3 className="text-2xl font-semibold mb-4 text-primary">Startup Category</h3>
+            <p className="text-muted-foreground text-lg">
+              For founders, co-founders, early-stage team members, and ecosystem enablers.
+            </p>
           </article>
-          <article className="bg-card border border-border rounded-lg p-6 shadow-sm">
-            <h2 className="text-2xl font-semibold mb-2">Categories</h2>
-            <p className="text-muted-foreground">Two divisions: Startup and Professional. Balanced fixtures, clear rules, and transparent standings throughout the season.</p>
+          <article className="bg-card border border-border rounded-lg p-8 shadow-sm">
+            <h3 className="text-2xl font-semibold mb-4 text-primary">Professional Category</h3>
+            <p className="text-muted-foreground text-lg">
+              For corporate teams, state-level players, and mentors to inspire the startup ecosystem.
+            </p>
           </article>
         </div>
       </section>
 
       {/* Featured Live Match */}
       <section className="container max-w-[1200px] mx-auto pb-4">
-        <div className="bg-card border border-border rounded-lg p-6 shadow-sm flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-          <div>
-            <h3 className="text-xl font-semibold text-foreground">Featured Live Match</h3>
-            <p className="text-muted-foreground">No live match at the moment. Check the schedule for upcoming fixtures.</p>
-          </div>
-          <div className="flex gap-3">
-            <Link to="/live" className="inline-flex px-4 py-2 rounded-md bg-primary text-primary-foreground hover:opacity-90 transition-colors">Watch Live</Link>
-            <Link to="/schedule" className="inline-flex px-4 py-2 rounded-md border border-border bg-background text-foreground hover:bg-card transition-colors">Scorecard</Link>
+        <div className="bg-card border border-border rounded-lg p-6 shadow-sm">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <div className="flex-1">
+              <h3 className="text-xl font-semibold text-foreground mb-2">Featured Live Match</h3>
+              <div className="space-y-2">
+                <p className="text-lg font-medium text-foreground">Team A vs Team B</p>
+                <p className="text-muted-foreground">Live Now</p>
+                <p className="text-2xl font-bold text-primary">135/4 (17.3)</p>
+              </div>
+            </div>
+            <div className="flex gap-3">
+              <Link to="/live" className="inline-flex px-6 py-2 rounded-md bg-primary text-primary-foreground hover:opacity-90 transition-colors font-medium">Watch Live</Link>
+              <Link to="/schedule" className="inline-flex px-6 py-2 rounded-md border border-border bg-background text-foreground hover:bg-card transition-colors font-medium">Scorecard</Link>
+            </div>
           </div>
         </div>
       </section>
@@ -77,9 +117,9 @@ const Index = () => {
             ["30+", "Matches"],
             ["1", "Grand Finale"],
           ].map(([val, label]) => (
-            <div key={label} className="bg-card border border-border rounded-lg p-5 text-center shadow-sm">
-              <div className="text-3xl font-bold text-foreground">{val}</div>
-              <div className="text-sm text-muted-foreground">{label}</div>
+            <div key={label} className="bg-card border border-border rounded-lg p-6 text-center shadow-sm">
+              <div className="text-4xl font-bold text-primary mb-2">{val}</div>
+              <div className="text-sm text-muted-foreground font-medium">{label}</div>
             </div>
           ))}
         </div>
@@ -87,23 +127,29 @@ const Index = () => {
 
       {/* Timeline */}
       <section className="container max-w-[1200px] mx-auto py-8">
-        <h2 className="text-2xl font-semibold mb-4">Timeline</h2>
-        <ol className="grid md:grid-cols-5 gap-4">
-          {["Registration", "Team Reveal", "League Start", "Knockouts", "Grand Finale"].map((stage, i) => (
-            <li key={stage} className="bg-card border border-border rounded-lg p-4 text-center shadow-sm">
-              <span className="text-sm text-muted-foreground">Step {i + 1}</span>
-              <div className="font-medium text-foreground">{stage}</div>
-            </li>
-          ))}
-        </ol>
+        <h2 className="text-3xl font-bold text-center mb-8">Timeline</h2>
+        <div className="relative">
+          <div className="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 bg-border -translate-y-1/2"></div>
+          <ol className="grid md:grid-cols-5 gap-4">
+            {["Registration", "Team Reveal", "League Start", "Knockouts", "Grand Finale"].map((stage, i) => (
+              <li key={stage} className="bg-card border border-border rounded-lg p-4 text-center shadow-sm relative">
+                <div className="hidden md:block absolute -top-2 left-1/2 w-4 h-4 bg-primary rounded-full -translate-x-1/2 border-2 border-background"></div>
+                <span className="text-sm text-muted-foreground">Step {i + 1}</span>
+                <div className="font-medium text-foreground">{stage}</div>
+              </li>
+            ))}
+          </ol>
+        </div>
       </section>
 
       {/* Partners */}
       <section className="container max-w-[1200px] mx-auto py-12">
-        <h2 className="text-2xl font-semibold mb-6">Partners</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-muted-foreground">
-          {['StartupTN', 'Aakam360', 'Aakam Shine', 'Tech Partners'].map((p) => (
-            <div key={p} className="bg-card border border-border rounded-lg p-6 shadow-sm">{p}</div>
+        <h2 className="text-3xl font-bold text-center mb-8">Partners</h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
+          {['StartupTN', 'Aakam360', 'Aakam Shine', 'Sponsors', 'Institutional Partners', 'Tech Partners'].map((p) => (
+            <div key={p} className="bg-card border border-border rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+              <div className="text-muted-foreground font-medium">{p}</div>
+            </div>
           ))}
         </div>
       </section>

@@ -14,6 +14,7 @@ import Teams from "./pages/Teams";
 import TeamProfile from "./pages/TeamProfile";
 import Points from "./pages/Points";
 import AdminLogin from "./pages/AdminLogin";
+import AdminDashboard from "./pages/AdminDashboard";
 
 const Live = lazy(() => import("./pages/Live"));
 const LiveMatch = lazy(() => import("./pages/LiveMatch"));
@@ -40,6 +41,7 @@ const App = () => (
             <Route path="/points" element={<Points />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/admin" element={<AdminLogin />} />
+            <Route path="/admin/dashboard" element={<AdminDashboard />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
