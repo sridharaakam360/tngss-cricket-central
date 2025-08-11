@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
-import logo from "@/assets/Asset 2@4x (3).png";
-
+import logo from "@/assets/3.png";
+import logo1 from "@/assets/1.png";
 const navItems = [
   { to: "/", label: "Home" },
   { to: "/event-launch", label: "Event Launch" },
@@ -22,8 +22,15 @@ const Header = () => {
             alt="TNGSS Cricket Central Logo" 
             className="h-10 w-auto"
           />
+        </Link>
+        <Link to="/" className="flex items-center gap-3 font-bold text-xl tracking-tight text-foreground hover:text-primary transition-colors">
+          <img 
+            src={logo1} 
+            alt="TNGSS Cricket Central Logo" 
+            className="h-10 w-auto"
+          />
           <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            TNGSS Cricket Central
+            Startup Premier League
           </span>
         </Link>
         <nav aria-label="Main navigation">

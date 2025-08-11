@@ -42,7 +42,7 @@ const Points = () => {
         </div>
 
         <Tabs defaultValue="startup" className="space-y-6">
-          <TabsList className="grid w-full grid-cols-2">
+          {/* <TabsList className="grid w-full grid-cols-2">
             <TabsTrigger value="startup" className="flex items-center gap-2">
               <Badge variant="default">Startup</Badge>
               <span>Category</span>
@@ -51,7 +51,7 @@ const Points = () => {
               <Badge variant="secondary">Professional</Badge>
               <span>Category</span>
             </TabsTrigger>
-          </TabsList>
+          </TabsList> */}
 
           <TabsContent value="startup" className="space-y-4">
             <div className="flex items-center justify-between">
