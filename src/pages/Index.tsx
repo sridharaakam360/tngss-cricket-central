@@ -1,41 +1,89 @@
 import { Link } from "react-router-dom";
 import SEO from "@/components/seo/SEO";
-import heroImg from "@/assets/hero-cricket.jpg";
+import logo from "@/assets/Asset 2@4x (3).png";
 
 const Index = () => {
   return (
     <main>
       <SEO
         title="Home"
-        description="TNGSS Startup Cricket League — schedule, teams, live scores, points, gallery, and registrations."
+        description="TNGSS Cricket Central — schedule, teams, live scores, points, gallery, and registrations."
         canonical="/"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "Organization",
-          name: "TNGSS Startup Cricket League",
+          name: "TNGSS Cricket Central",
           url: "/",
         }}
       />
 
       {/* Hero Banner */}
-      <section className="relative">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Animated Background */}
         <div className="absolute inset-0">
-          <img
-            src={heroImg}
-            alt="Cricket stadium with crowd and green pitch"
-            className="w-full h-[420px] md:h-[520px] object-cover"
-            loading="eager"
-          />
-          <div className="absolute inset-0 bg-foreground/70" aria-hidden="true" />
+          <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-background" />
+          <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-accent/20" />
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse delay-1000" />
         </div>
-        <div className="container max-w-[1200px] mx-auto relative z-10 flex items-center h-[420px] md:h-[520px]">
-          <div className="max-w-2xl text-primary-foreground">
-            <h1 className="text-4xl md:text-5xl font-bold mb-3">TNGSS Startup Cricket League</h1>
-            <p className="text-base md:text-lg opacity-90 mb-6">Where Startups Meet Sport</p>
-            <div className="flex gap-3">
-              <Link to="/event-launch" className="inline-flex items-center px-6 py-3 rounded-md bg-primary text-primary-foreground hover:opacity-90 transition-colors font-medium">Register Your Team</Link>
+        
+        {/* Grid Pattern Overlay */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.03)_1px,transparent_1px)] bg-[size:50px_50px]" />
+        
+        <div className="container max-w-[1200px] mx-auto relative z-10 text-center px-4">
+          <div className="max-w-4xl mx-auto">
+            {/* Logo */}
+            <div className="mb-8 flex justify-center">
+              <img 
+                src={logo} 
+                alt="TNGSS Cricket Central Logo" 
+                className="h-24 md:h-32 w-auto drop-shadow-2xl"
+              />
+            </div>
+            
+            {/* Main Heading */}
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-foreground to-accent bg-clip-text text-transparent leading-tight">
+              TNGSS Cricket Central
+            </h1>
+            
+            {/* Subheading */}
+            <p className="text-xl md:text-2xl text-muted-foreground mb-8 font-light">
+              Where Innovation Meets Cricket Excellence
+            </p>
+            
+            {/* Description */}
+            <p className="text-base md:text-lg text-muted-foreground/80 mb-12 max-w-2xl mx-auto leading-relaxed">
+              Join the ultimate startup cricket league that brings together Tamil Nadu's most innovative companies 
+              for an electrifying tournament experience.
+            </p>
+            
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link 
+                to="/event-launch" 
+                className="group inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-primary to-primary/80 text-primary-foreground hover:from-primary/90 hover:to-primary/70 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-primary/25 hover:scale-105"
+              >
+                <span>Register Your Team</span>
+                <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+              
+              <Link 
+                to="/live" 
+                className="inline-flex items-center px-8 py-4 rounded-lg border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-all duration-300 font-semibold text-lg hover:scale-105"
+              >
+                Watch Live Matches
+              </Link>
             </div>
           </div>
+        </div>
+        
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <svg className="w-6 h-6 text-muted-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
         </div>
       </section>
 
