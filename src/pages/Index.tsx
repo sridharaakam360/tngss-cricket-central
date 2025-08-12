@@ -326,7 +326,7 @@ const Index = () => {
             </div>
             <div className="flex gap-3 justify-center">
               {/* <Link to="/live" className="inline-flex px-6 py-3 rounded-md bg-primary text-primary-foreground hover:opacity-90 transition-colors font-medium shadow-md hover:shadow-lg">Watch Live</Link> */}
-              <Link to="/schedule" className="inline-flex px-6 py-3 rounded-md border border-border bg-transparent text-foreground hover:bg-accent hover:text-accent-foreground transition-colors font-medium">Scorecard</Link>
+              <Link to="/live" className="inline-flex px-6 py-3 rounded-md border border-border bg-transparent text-foreground hover:bg-accent hover:text-accent-foreground transition-colors font-medium">Scorecard</Link>
             </div>
           </div>
         </div>
