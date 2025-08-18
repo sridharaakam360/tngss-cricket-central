@@ -34,7 +34,7 @@ const App = () => (
         <Suspense fallback={<div className="container max-w-[1200px] mx-auto py-10">Loading…</div>}>
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/event-launch" element={<EventLaunch />} />
+            {/* <Route path="/event-launch" element={<EventLaunch />} />
             <Route path="/schedule" element={<Schedule />} />
             <Route path="/teams" element={<Teams />} />
             <Route path="/teams/:teamId" element={<TeamProfile />} />
@@ -43,7 +43,7 @@ const App = () => (
             <Route path="/points" element={<Points />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/admin" element={<AdminLogin />} />
-            <Route path="/admin/dashboard" element={<AdminDashboard />} />
+            <Route path="/admin/dashboard" element={<AdminDashboard />} /> */}
             <Route path="/register" element={<RegistrationForm/>}/>
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
