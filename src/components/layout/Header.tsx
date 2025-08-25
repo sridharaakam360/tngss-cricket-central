@@ -2,8 +2,8 @@ import { Link, NavLink } from "react-router-dom";
 import logo from "@/assets/3.png";
 import logo1 from "@/assets/1.png";
 const navItems = [
-  { to: "/", label: "Home" },
-  // { to: "/event-launch", label: "Event Launch" },
+  { to: "/", label: "Home" },  
+  { to: "/event-launch", label: "Event Launch" },
   // { to: "/schedule", label: "Schedule" },
   // { to: "/teams", label: "Teams" },
   // { to: "/live", label: "Live" },

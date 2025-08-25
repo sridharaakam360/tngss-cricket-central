@@ -490,7 +490,7 @@ const Index = () => {
             </div>
           </div>
         </div>
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
           <svg
             className="w-6 h-6 text-muted-foreground"
             fill="none"
@@ -504,7 +504,7 @@ const Index = () => {
               d="M19 14l-7 7m0 0l-7-7m7 7V3"
             />
           </svg>
-        </div>
+        </div> */}
       </section>
 
       {/* About the League */}
@@ -569,6 +569,122 @@ const Index = () => {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Event Description */}
+      <section className="bg-secondary/10 py-16 md:py-24">
+        <div className="container max-w-[1200px] mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
+            Startup Cricket League
+          </h2>
+
+          <div className="bg-card border border-border rounded-lg p-8 shadow-lg">
+            <ul className="list-disc list-inside text-lg text-muted-foreground space-y-3">
+              <li>
+                This is a{" "}
+                <strong>statewide cricket league designed exclusively for startups</strong>{" "}
+                across Tamil Nadu.
+              </li>
+              <li>
+                Teams will be <strong>formed based on their respective StartupTN Regional Hubs</strong>,
+                encouraging collaboration and regional representation.
+              </li>
+              <li>
+                In case a Regional Hub has fewer participants,{" "}
+                <strong>excess players from other hubs will be shuffled</strong> to balance
+                the teams.
+              </li>
+              <li>
+                All matches will follow <strong>standard cricket rules</strong> and will be
+                played in a <strong>knockout format</strong>.
+              </li>
+              <li>
+                The event aims to <strong>strengthen bonding, build networks</strong> and{" "}
+                <strong>celebrate teamwork & innovation</strong> in the startup community.
+              </li>
+              <li>
+                This event is not only for the players all startups across Tamil Nadu can register, network and cheer for their Regional Hub teams while engaging with the ecosystem.
+              </li>
+            </ul>
+
+            {/* Table */}
+            <div className="overflow-x-auto mt-8">
+              <table className="min-w-full border border-border rounded-lg text-left">
+                <thead className="bg-secondary text-foreground">
+                  <tr>
+                    <th className="p-3 border">S. No</th>
+                    <th className="p-3 border">Hub Name</th>
+                    <th className="p-3 border">Districts Covered</th>
+                  </tr>
+                </thead>
+                <tbody className="text-muted-foreground">
+                  {[
+                    {
+                      no: 1,
+                      hub: "Chennai Metro Hub",
+                      districts: "Chengalpattu, Chennai, Kancheepuram, Tiruvallur",
+                    },
+                    {
+                      no: 2,
+                      hub: "Cuddalore Regional Hub",
+                      districts: "Cuddalore, Kallakurichi, Tiruvannamalai, Villupuram",
+                    },
+                    {
+                      no: 3,
+                      hub: "Hosur Regional Hub",
+                      districts: "Dharmapuri, Krishnagiri, Ranipet, Tirupattur, Vellore",
+                    },
+                    {
+                      no: 4,
+                      hub: "Salem Regional Hub",
+                      districts: "Namakkal, Salem",
+                    },
+                    {
+                      no: 5,
+                      hub: "Erode Regional Hub",
+                      districts: "Erode, Tiruppur",
+                    },
+                    {
+                      no: 6,
+                      hub: "Coimbatore Regional Hub",
+                      districts: "Coimbatore, The Nilgiris",
+                    },
+                    {
+                      no: 7,
+                      hub: "Thanjavur Regional Hub",
+                      districts:
+                        "Mayiladuthurai, Nagapattinam, Pudukkottai, Thanjavur, Thiruvarur",
+                    },
+                    {
+                      no: 8,
+                      hub: "Tiruchirappalli Satellite Hub",
+                      districts:
+                        "Ariyalur, Karur, Perambalur, Tiruchirappalli",
+                    },
+                    {
+                      no: 9,
+                      hub: "Madurai Regional Hub",
+                      districts:
+                        "Dindigul, Madurai, Sivagangai, Theni, Virudhunagar",
+                    },
+                    {
+                      no: 10,
+                      hub: "Tirunelveli Regional Hub",
+                      districts:
+                        "Kanniyakumari, Ramanathapuram, Tenkasi, Thoothukudi, Tirunelveli",
+                    },
+                  ].map(({ no, hub, districts }) => (
+                    <tr key={no} className="hover:bg-secondary/30 transition">
+                      <td className="p-3 border">{no}</td>
+                      <td className="p-3 border">{hub}</td>
+                      <td className="p-3 border">{districts}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </section>
