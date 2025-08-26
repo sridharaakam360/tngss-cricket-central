@@ -13,7 +13,7 @@ const StartupCricketLeagueLaunch = () => {
     subtitle: "The official first-ever roadshow for Tamil Nadu Global Startup Summit (TNGSS) 2025",
     bannerImage: "/assets/hero-cricket.jpg",
     overlayElements: {
-      logo: "/assets/2.png",
+      logo: "/assets/7.png",
       eventDate: "August 14, 2025",
       venue: "SSEI, Salem"
     }
