@@ -1,4 +1,3 @@
-
 // import { useState, useEffect } from "react";
 // import { useNavigate } from "react-router-dom";
 // import SEO from "@/components/seo/SEO";
@@ -9,12 +8,12 @@
 // import { Input } from "@/components/ui/input";
 // import { Label } from "@/components/ui/label";
 // import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-// import { 
-//   Calendar, 
-//   Users, 
-//   Trophy, 
-//   Settings, 
-//   BarChart3, 
+// import {
+//   Calendar,
+//   Users,
+//   Trophy,
+//   Settings,
+//   BarChart3,
 //   FileText,
 //   LogOut,
 //   Plus,
@@ -121,7 +120,7 @@
 //   const navigate = useNavigate();
 //   const [user, setUser] = useState<AdminUser | null>(null);
 //   const [activeTab, setActiveTab] = useState("overview");
-  
+
 //   const [players, setPlayers] = useState<Player[]>([
 //     { id: "1", name: "John Smith", team: "Alpha Startups", position: "Batsman", battingAvg: 45.2, bowlingAvg: 0, matchesPlayed: 12 },
 //     { id: "2", name: "Mike Johnson", team: "Beta Builders", position: "All-rounder", battingAvg: 38.7, bowlingAvg: 25.3, matchesPlayed: 15 },
@@ -129,35 +128,35 @@
 //   ]);
 
 //   const [matches, setMatches] = useState<Match[]>([
-//     { 
-//       id: "1", 
-//       team1: "Alpha Startups", 
-//       team2: "Beta Builders", 
-//       status: "live", 
-//       date: "2025-08-11", 
+//     {
+//       id: "1",
+//       team1: "Alpha Startups",
+//       team2: "Beta Builders",
+//       status: "live",
+//       date: "2025-08-11",
 //       venue: "Cricket Ground A",
 //       format: "T20",
 //       overs: 20,
 //       tossWinner: "Alpha Startups",
 //       tossDecision: "bat"
 //     },
-//     { 
-//       id: "2", 
-//       team1: "Pro Warriors", 
-//       team2: "Tech Titans", 
-//       status: "completed", 
-//       date: "2025-08-10", 
+//     {
+//       id: "2",
+//       team1: "Pro Warriors",
+//       team2: "Tech Titans",
+//       status: "completed",
+//       date: "2025-08-10",
 //       venue: "Cricket Ground B",
 //       format: "T20",
 //       overs: 20,
 //       result: "Pro Warriors won by 45 runs"
 //     },
-//     { 
-//       id: "3", 
-//       team1: "Code Ninjas", 
-//       team2: "Data Devils", 
-//       status: "upcoming", 
-//       date: "2025-08-12", 
+//     {
+//       id: "3",
+//       team1: "Code Ninjas",
+//       team2: "Data Devils",
+//       status: "upcoming",
+//       date: "2025-08-12",
 //       venue: "Cricket Ground C",
 //       format: "T20",
 //       overs: 20
@@ -244,7 +243,7 @@
 //       reviewedBy: "admin@tngss.com"
 //     }
 //   ]);
-  
+
 //   // Player management state
 //   const [newPlayer, setNewPlayer] = useState({
 //     name: "", team: "", position: "", battingAvg: 0, bowlingAvg: 0, matchesPlayed: 0
@@ -265,7 +264,7 @@
 
 //   // Application management state
 //   const [applicationFilter, setApplicationFilter] = useState<"all" | "pending" | "approved" | "rejected" | "under_review">("all");
-  
+
 //   // Score entry state
 //   const [selectedMatch, setSelectedMatch] = useState<string>("");
 //   const [scoreEntry, setScoreEntry] = useState<ScoreEntry>({
@@ -379,14 +378,14 @@
 
 //   // Application management functions
 //   const updateApplicationStatus = (id: string, status: Application["status"], reviewNotes?: string) => {
-//     setApplications(applications.map(app => 
-//       app.id === id 
-//         ? { 
-//             ...app, 
-//             status, 
+//     setApplications(applications.map(app =>
+//       app.id === id
+//         ? {
+//             ...app,
+//             status,
 //             reviewedBy: user?.email || "",
 //             reviewNotes: reviewNotes || app.reviewNotes
-//           } 
+//           }
 //         : app
 //     ));
 //   };
@@ -404,7 +403,7 @@
 //   const addRuns = (runs: number, isExtra: boolean = false, extraType?: string) => {
 //     const striker = scoreEntry.striker;
 //     const currentBatsman = scoreEntry[striker];
-    
+
 //     const ballEntry: BallEntry = {
 //       overNumber: scoreEntry.overs + 1,
 //       ballNumber: scoreEntry.balls + 1,
@@ -426,7 +425,7 @@
 //         fours: runs === 4 ? currentBatsman.fours + 1 : currentBatsman.fours,
 //         sixes: runs === 6 ? currentBatsman.sixes + 1 : currentBatsman.sixes
 //       };
-      
+
 //       setScoreEntry(prev => ({
 //         ...prev,
 //         [striker]: updatedBatsman,
@@ -447,7 +446,7 @@
 //         ...currentBatsman,
 //         balls: currentBatsman.balls + 1
 //       };
-      
+
 //       setScoreEntry(prev => ({
 //         ...prev,
 //         [striker]: updatedBatsman,
@@ -467,7 +466,7 @@
 //   const addWicket = (wicketType: string = "Out") => {
 //     const striker = scoreEntry.striker;
 //     const currentBatsman = scoreEntry[striker];
-    
+
 //     const ballEntry: BallEntry = {
 //       overNumber: scoreEntry.overs + 1,
 //       ballNumber: scoreEntry.balls + 1,
@@ -534,13 +533,13 @@
 //     updatedBalls[index] = {
 //       ...updatedBalls[index],
 //       runs: newRuns,
-//       commentary: updatedBalls[index].isExtra 
+//       commentary: updatedBalls[index].isExtra
 //         ? `${updatedBalls[index].extraType} - ${newRuns} run${newRuns !== 1 ? 's' : ''}`
 //         : `${newRuns} run${newRuns !== 1 ? 's' : ''}`
 //     };
-    
+
 //     setBallByBall(updatedBalls);
-    
+
 //     // Update total runs
 //     setScoreEntry(prev => ({
 //       ...prev,
@@ -580,7 +579,7 @@
 //   return (
 //     <main className="min-h-screen bg-background">
 //       <SEO title="Admin Dashboard" description="TNGSS Cricket League Admin Panel" canonical="/admin/dashboard" />
-      
+
 //       {/* Header */}
 //       <header className="border-b bg-card">
 //         <div className="container mx-auto px-4 py-4">
@@ -1411,7 +1410,7 @@
 //                                 </div>
 //                               </div>
 //                             </div>
-                            
+
 //                             <div>
 //                               <Label className="text-xs font-medium text-muted-foreground">MATCHES</Label>
 //                               <div className="space-y-1 text-sm">
@@ -1429,7 +1428,7 @@
 //                                 </div>
 //                               </div>
 //                             </div>
-                            
+
 //                             <div>
 //                               <Label className="text-xs font-medium text-muted-foreground">STATISTICS</Label>
 //                               <div className="space-y-1 text-sm">
@@ -1452,7 +1451,7 @@
 //                               </div>
 //                             </div>
 //                           </div>
-                          
+
 //                           <div className="flex gap-2 ml-4">
 //                             {editingTeam === team.id ? (
 //                               <Button size="sm" onClick={() => setEditingTeam(null)}>
@@ -1756,7 +1755,7 @@
 //                                 <div className="flex items-center gap-2 mb-2">
 //                                   <h3 className="font-bold text-lg">{application.applicantName}</h3>
 //                                   <Badge variant={
-//                                     application.type === "player" ? "default" : 
+//                                     application.type === "player" ? "default" :
 //                                     application.type === "team" ? "secondary" : "outline"
 //                                   }>
 //                                     {application.type.charAt(0).toUpperCase() + application.type.slice(1)}
@@ -1794,14 +1793,14 @@
 //                               <div>
 //                                 <Label className="text-xs font-medium text-muted-foreground">EXPERIENCE</Label>
 //                                 <p className="text-sm mt-1">{application.experience || "Not provided"}</p>
-                                
+
 //                                 {application.reviewedBy && (
 //                                   <div className="mt-3">
 //                                     <Label className="text-xs font-medium text-muted-foreground">REVIEWED BY</Label>
 //                                     <p className="text-sm mt-1">{application.reviewedBy}</p>
 //                                   </div>
 //                                 )}
-                                
+
 //                                 {application.reviewNotes && (
 //                                   <div className="mt-2">
 //                                     <Label className="text-xs font-medium text-muted-foreground">REVIEW NOTES</Label>
@@ -1843,7 +1842,7 @@
 //                                       </Button>
 //                                     </>
 //                                   )}
-                                  
+
 //                                   {application.status === "under_review" && (
 //                                     <>
 //                                       <Button
@@ -1873,7 +1872,7 @@
 //                                       </Button>
 //                                     </>
 //                                   )}
-                                  
+
 //                                   {(application.status === "approved" || application.status === "rejected") && (
 //                                     <Button
 //                                       size="sm"
@@ -1884,7 +1883,7 @@
 //                                       Re-review
 //                                     </Button>
 //                                   )}
-                                  
+
 //                                   <Button
 //                                     size="sm"
 //                                     variant="outline"
@@ -1900,14 +1899,14 @@
 //                           </div>
 //                         </div>
 //                       ))}
-                      
+
 //                       {getFilteredApplications().length === 0 && (
 //                         <div className="text-center py-8">
 //                           <FileText className="w-12 h-12 mx-auto text-muted-foreground mb-4" />
 //                           <h3 className="text-lg font-medium mb-2">No Applications Found</h3>
 //                           <p className="text-muted-foreground">
-//                             {applicationFilter === "all" 
-//                               ? "No applications have been submitted yet." 
+//                             {applicationFilter === "all"
+//                               ? "No applications have been submitted yet."
 //                               : `No ${applicationFilter.replace('_', ' ')} applications found.`
 //                             }
 //                           </p>
@@ -1930,7 +1929,7 @@
 //                       </div>
 //                     </CardContent>
 //                   </Card>
-                  
+
 //                   <Card>
 //                     <CardContent className="p-4">
 //                       <div className="flex items-center justify-between">
@@ -1944,7 +1943,7 @@
 //                       </div>
 //                     </CardContent>
 //                   </Card>
-                  
+
 //                   <Card>
 //                     <CardContent className="p-4">
 //                       <div className="flex items-center justify-between">
@@ -1958,7 +1957,7 @@
 //                       </div>
 //                     </CardContent>
 //                   </Card>
-                  
+
 //                   <Card>
 //                     <CardContent className="p-4">
 //                       <div className="flex items-center justify-between">
@@ -1966,7 +1965,7 @@
 //                           <p className="text-sm font-medium text-muted-foreground">Approval Rate</p>
 //                           <p className="text-2xl font-bold">
 //                             {applications.filter(app => app.status === "approved" || app.status === "rejected").length > 0
-//                               ? Math.round((applications.filter(app => app.status === "approved").length / 
+//                               ? Math.round((applications.filter(app => app.status === "approved").length /
 //                                  applications.filter(app => app.status === "approved" || app.status === "rejected").length) * 100)
 //                               : 0}%
 //                           </p>
@@ -1996,7 +1995,6 @@
 
 // export default AdminDashboard;
 
-
 import { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import SEO from "@/components/seo/SEO";
@@ -2004,7 +2002,12 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import {
   FileText,
   LogOut,
@@ -2024,7 +2027,8 @@ interface AdminUser {
   email: string;
 }
 
-const APPLICATIONS_API_URL = "https://aakamshineapi.yugan.tech/api/applications/get";
+const APPLICATIONS_API_URL =
+  "https://aakamshineapi.yugan.tech/api/applications/get";
 
 type Participation = {
   id: string | number;
@@ -2061,33 +2065,63 @@ const toArrayFromLinks = (v: Participation["websiteLinks"]): string[] => {
   if (!v) return [];
   if (Array.isArray(v)) return v.filter(Boolean).map(String);
   const s = String(v);
-  return s.split(/[\s,]+/).map(x => x.trim()).filter(Boolean);
+  return s
+    .split(/[\s,]+/)
+    .map((x) => x.trim())
+    .filter(Boolean);
 };
+
+// const normalizePhotoUrl = (url?: string | null): string | undefined => {
+//   if (!url) return undefined;
+//   const trimmed = String(url).trim();
+//   if (!trimmed) return undefined;
+//   return trimmed;
+// };
+const API_BASE = "https://aakamshineapi.yugan.tech";
 
 const normalizePhotoUrl = (url?: string | null): string | undefined => {
   if (!url) return undefined;
   const trimmed = String(url).trim();
   if (!trimmed) return undefined;
-  return trimmed;
+
+  // If the URL is already absolute (starts with http/https), return as-is
+  if (/^https?:\/\//i.test(trimmed)) {
+    return trimmed;
+  }
+
+  // Otherwise, prepend your API base
+  return `${API_BASE}${trimmed.startsWith("/") ? "" : "/"}${trimmed}`;
 };
+
 
 const statusColor = (status?: string) => {
   const s = (status || "").toLowerCase();
-  if (["approved", "accepted"].includes(s)) return "bg-emerald-100 text-emerald-700";
+  if (["approved", "accepted"].includes(s))
+    return "bg-emerald-100 text-emerald-700";
   if (["rejected", "denied"].includes(s)) return "bg-red-100 text-red-700";
-  if (["under_review", "review", "in_review", "processing"].includes(s)) return "bg-amber-100 text-amber-700";
+  if (["under_review", "review", "in_review", "processing"].includes(s))
+    return "bg-amber-100 text-amber-700";
   return "bg-slate-100 text-slate-700";
 };
 
 const formatPhone = (p?: string) => (p ? p : "-");
-const formatText = (t?: string) => (t && String(t).trim().length > 0 ? String(t) : "-");
+const formatText = (t?: string) =>
+  t && String(t).trim().length > 0 ? String(t) : "-";
 
 /* ----------------------------- UI Subcomponents --------------------------- */
 
-function DetailItem({ label, value }: { label: string; value: React.ReactNode }) {
+function DetailItem({
+  label,
+  value,
+}: {
+  label: string;
+  value: React.ReactNode;
+}) {
   return (
     <div>
-      <div className="text-xs uppercase tracking-wide text-muted-foreground">{label}</div>
+      <div className="text-xs uppercase tracking-wide text-muted-foreground">
+        {label}
+      </div>
       <div className="font-medium break-words">{value}</div>
     </div>
   );
@@ -2111,7 +2145,9 @@ function Section({
 function PhotoBlock({ title, src }: { title: string; src?: string }) {
   return (
     <div className="border rounded-lg overflow-hidden">
-      <div className="px-4 py-2 border-b text-sm text-muted-foreground">{title}</div>
+      <div className="px-4 py-2 border-b text-sm text-muted-foreground">
+        {title}
+      </div>
       {src ? (
         <img
           src={src}
@@ -2141,9 +2177,17 @@ function ApplicationsPanel() {
 
   const fetchData = async () => {
     try {
+      const token = localStorage.getItem("adminToken");
       setLoading(true);
       setError(null);
-      const res = await fetch(APPLICATIONS_API_URL, { method: "GET" });
+      // const res = await fetch(APPLICATIONS_API_URL, { method: "GET" });
+      const res = await fetch(APPLICATIONS_API_URL, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        ...(token ? { Authorization: `Bearer ${token}` } : {}), // ✅ attach token if present
+      },
+    });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const json = await res.json();
 
@@ -2196,14 +2240,30 @@ function ApplicationsPanel() {
     if (!q) return items;
     return items.filter((it) => {
       return (
-        String(it.fullName || "").toLowerCase().includes(q) ||
-        String(it.email || "").toLowerCase().includes(q) ||
-        String(it.mobile || "").toLowerCase().includes(q) ||
-        String(it.organizationName || "").toLowerCase().includes(q) ||
-        String(it.designation || "").toLowerCase().includes(q) ||
-        String(it.district || "").toLowerCase().includes(q) ||
-        String(it.sector || "").toLowerCase().includes(q) ||
-        String(it.status || "").toLowerCase().includes(q)
+        String(it.fullName || "")
+          .toLowerCase()
+          .includes(q) ||
+        String(it.email || "")
+          .toLowerCase()
+          .includes(q) ||
+        String(it.mobile || "")
+          .toLowerCase()
+          .includes(q) ||
+        String(it.organizationName || "")
+          .toLowerCase()
+          .includes(q) ||
+        String(it.designation || "")
+          .toLowerCase()
+          .includes(q) ||
+        String(it.district || "")
+          .toLowerCase()
+          .includes(q) ||
+        String(it.sector || "")
+          .toLowerCase()
+          .includes(q) ||
+        String(it.status || "")
+          .toLowerCase()
+          .includes(q)
       );
     });
   }, [items, query]);
@@ -2227,8 +2287,15 @@ function ApplicationsPanel() {
                 Last updated: {lastLoadedAt}
               </span>
             )}
-            <Button variant="outline" size="sm" onClick={fetchData} disabled={loading}>
-              <RefreshCw className={`w-4 h-4 mr-2 ${loading ? "animate-spin" : ""}`} />
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={fetchData}
+              disabled={loading}
+            >
+              <RefreshCw
+                className={`w-4 h-4 mr-2 ${loading ? "animate-spin" : ""}`}
+              />
               {loading ? "Refreshing..." : "Refresh"}
             </Button>
           </div>
@@ -2242,7 +2309,8 @@ function ApplicationsPanel() {
               className="w-full md:max-w-md"
             />
             <div className="text-sm text-muted-foreground">
-              Total: {filtered.length} {filtered.length === 1 ? "record" : "records"}
+              Total: {filtered.length}{" "}
+              {filtered.length === 1 ? "record" : "records"}
             </div>
           </div>
 
@@ -2255,11 +2323,15 @@ function ApplicationsPanel() {
           )}
 
           {!loading && error && (
-            <div className="p-3 border rounded text-sm text-red-600 bg-red-50">{error}</div>
+            <div className="p-3 border rounded text-sm text-red-600 bg-red-50">
+              {error}
+            </div>
           )}
 
           {!loading && !error && filtered.length === 0 && (
-            <div className="text-sm text-muted-foreground">No records found.</div>
+            <div className="text-sm text-muted-foreground">
+              No records found.
+            </div>
           )}
 
           {!loading && !error && filtered.length > 0 && (
@@ -2282,21 +2354,45 @@ function ApplicationsPanel() {
                   {filtered.map((row, idx) => (
                     <tr key={String(row.id)} className="border-t">
                       <td className="p-3 align-top">{idx + 1}</td>
-                      <td className="p-3 align-top font-medium">{formatText(row.fullName)}</td>
-                      <td className="p-3 align-top">{formatText(row.organizationName)}</td>
-                      <td className="p-3 align-top">
-                        {row.email ? <a className="underline" href={`mailto:${row.email}`}>{row.email}</a> : "-"}
+                      <td className="p-3 align-top font-medium">
+                        {formatText(row.fullName)}
                       </td>
-                      <td className="p-3 align-top">{formatPhone(row.mobile)}</td>
-                      <td className="p-3 align-top">{formatText(row.district)}</td>
-                      <td className="p-3 align-top">{formatText(row.sector)}</td>
                       <td className="p-3 align-top">
-                        <span className={`inline-flex items-center px-2 py-1 rounded text-xs font-medium ${statusColor(row.status)}`}>
+                        {formatText(row.organizationName)}
+                      </td>
+                      <td className="p-3 align-top">
+                        {row.email ? (
+                          <a className="underline" href={`mailto:${row.email}`}>
+                            {row.email}
+                          </a>
+                        ) : (
+                          "-"
+                        )}
+                      </td>
+                      <td className="p-3 align-top">
+                        {formatPhone(row.mobile)}
+                      </td>
+                      <td className="p-3 align-top">
+                        {formatText(row.district)}
+                      </td>
+                      <td className="p-3 align-top">
+                        {formatText(row.sector)}
+                      </td>
+                      <td className="p-3 align-top">
+                        <span
+                          className={`inline-flex items-center px-2 py-1 rounded text-xs font-medium ${statusColor(
+                            row.status
+                          )}`}
+                        >
                           {formatText(row.status)}
                         </span>
                       </td>
                       <td className="p-3 align-top text-right">
-                        <Button size="sm" variant="outline" onClick={() => openPreview(row)}>
+                        <Button
+                          size="sm"
+                          variant="outline"
+                          onClick={() => openPreview(row)}
+                        >
                           <Eye className="w-4 h-4 mr-2" />
                           View
                         </Button>
@@ -2318,13 +2414,19 @@ function ApplicationsPanel() {
               <DialogHeader className="pb-3 border-b">
                 <div className="flex items-start justify-between gap-4">
                   <div>
-                    <DialogTitle className="text-xl">{formatText(selected.fullName)}</DialogTitle>
+                    <DialogTitle className="text-xl">
+                      {formatText(selected.fullName)}
+                    </DialogTitle>
                     <div className="mt-1 flex items-center gap-2 text-sm text-muted-foreground">
                       <Building2 className="w-4 h-4" />
-                      <span className="font-medium">{formatText(selected.organizationName)}</span>
+                      <span className="font-medium">
+                        {formatText(selected.organizationName)}
+                      </span>
                     </div>
                   </div>
-                  <Badge className={statusColor(selected.status)}>{formatText(selected.status)}</Badge>
+                  <Badge className={statusColor(selected.status)}>
+                    {formatText(selected.status)}
+                  </Badge>
                 </div>
               </DialogHeader>
 
@@ -2338,7 +2440,10 @@ function ApplicationsPanel() {
                         label="Email"
                         value={
                           selected.email ? (
-                            <a className="underline inline-flex items-center gap-1" href={`mailto:${selected.email}`}>
+                            <a
+                              className="underline inline-flex items-center gap-1"
+                              href={`mailto:${selected.email}`}
+                            >
                               <Mail className="w-4 h-4" />
                               {selected.email}
                             </a>
@@ -2351,7 +2456,10 @@ function ApplicationsPanel() {
                         label="Mobile"
                         value={
                           selected.mobile ? (
-                            <a className="underline inline-flex items-center gap-1" href={`tel:${selected.mobile}`}>
+                            <a
+                              className="underline inline-flex items-center gap-1"
+                              href={`tel:${selected.mobile}`}
+                            >
                               <Phone className="w-4 h-4" />
                               {selected.mobile}
                             </a>
@@ -2360,14 +2468,23 @@ function ApplicationsPanel() {
                           )
                         }
                       />
-                      <DetailItem label="Designation" value={formatText(selected.designation)} />
+                      <DetailItem
+                        label="Designation"
+                        value={formatText(selected.designation)}
+                      />
                     </div>
                   </Section>
 
                   <Section title="Startup">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      <DetailItem label="Entity Type" value={formatText(selected.entityType)} />
-                      <DetailItem label="Sector" value={formatText(selected.sector)} />
+                      <DetailItem
+                        label="Entity Type"
+                        value={formatText(selected.entityType)}
+                      />
+                      <DetailItem
+                        label="Sector"
+                        value={formatText(selected.sector)}
+                      />
                       <DetailItem
                         label="DPIIT Registered"
                         value={
@@ -2382,20 +2499,27 @@ function ApplicationsPanel() {
                         <DetailItem
                           label="Website Links"
                           value={
-                            toArrayFromLinks(selected.websiteLinks).length > 0 ? (
+                            toArrayFromLinks(selected.websiteLinks).length >
+                            0 ? (
                               <div className="flex flex-wrap gap-2">
-                                {toArrayFromLinks(selected.websiteLinks).map((u, i) => (
-                                  <a
-                                    key={i}
-                                    href={u.startsWith("http") ? u : `https://${u}`}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className="inline-flex items-center gap-1 px-2 py-1 text-xs rounded border hover:underline"
-                                  >
-                                    <Globe className="w-3 h-3" />
-                                    <span className="break-all">{u}</span>
-                                  </a>
-                                ))}
+                                {toArrayFromLinks(selected.websiteLinks).map(
+                                  (u, i) => (
+                                    <a
+                                      key={i}
+                                      href={
+                                        u.startsWith("http")
+                                          ? u
+                                          : `https://${u}`
+                                      }
+                                      target="_blank"
+                                      rel="noreferrer"
+                                      className="inline-flex items-center gap-1 px-2 py-1 text-xs rounded border hover:underline"
+                                    >
+                                      <Globe className="w-3 h-3" />
+                                      <span className="break-all">{u}</span>
+                                    </a>
+                                  )
+                                )}
                               </div>
                             ) : (
                               "-"
@@ -2406,7 +2530,11 @@ function ApplicationsPanel() {
                       <div className="sm:col-span-2">
                         <DetailItem
                           label="Startup Description"
-                          value={<span className="whitespace-pre-wrap">{formatText(selected.startupDescription)}</span>}
+                          value={
+                            <span className="whitespace-pre-wrap">
+                              {formatText(selected.startupDescription)}
+                            </span>
+                          }
                         />
                       </div>
                     </div>
@@ -2423,20 +2551,35 @@ function ApplicationsPanel() {
                           </span>
                         }
                       />
-                      <DetailItem label="Regional Hub" value={formatText(selected.regionalHub)} />
-                      <DetailItem label="Pincode" value={formatText(String(selected.pincode || ""))} />
+                      <DetailItem
+                        label="Regional Hub"
+                        value={formatText(selected.regionalHub)}
+                      />
+                      <DetailItem
+                        label="Pincode"
+                        value={formatText(String(selected.pincode || ""))}
+                      />
                     </div>
                   </Section>
 
                   <Section title="Cricket">
-                    <DetailItem label="Cricket Experience" value={formatText(selected.cricketExperience)} />
+                    <DetailItem
+                      label="Cricket Experience"
+                      value={formatText(selected.cricketExperience)}
+                    />
                   </Section>
                 </div>
 
                 {/* Photos / Right rail */}
                 <div className="lg:col-span-5 space-y-4">
-                  <PhotoBlock title="Company Photo" src={normalizePhotoUrl(selected.companyPhoto)} />
-                  <PhotoBlock title="Team Leader Photo" src={normalizePhotoUrl(selected.teamLeaderPhoto)} />
+                  <PhotoBlock
+                    title="Company Photo"
+                    src={normalizePhotoUrl(selected.companyPhoto)}
+                  />
+                  <PhotoBlock
+                    title="Team Leader Photo"
+                    src={normalizePhotoUrl(selected.teamLeaderPhoto)}
+                  />
                 </div>
               </div>
             </>
@@ -2453,12 +2596,24 @@ const AdminDashboard = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState<AdminUser | null>(null);
 
-  useEffect(() => {
-    const isAuthenticated = localStorage.getItem("adminAuth");
-    const role = localStorage.getItem("adminRole") as AdminUser["role"];
-    const email = localStorage.getItem("adminEmail");
+  // useEffect(() => {
+  //   const isAuthenticated = localStorage.getItem("adminAuth");
+  //   const role = localStorage.getItem("adminRole") as AdminUser["role"];
+  //   const email = localStorage.getItem("adminEmail");
 
-    if (!isAuthenticated || !role) {
+  //   if (!isAuthenticated || !role) {
+  //     navigate("/admin");
+  //     return;
+  //   }
+
+  //   setUser({ role, email: email || "" });
+  // }, [navigate]);
+  useEffect(() => {
+    const token = localStorage.getItem("adminToken");
+    const role = localStorage.getItem("adminRole") as AdminUser["role"];
+    const email = localStorage.getItem("adminUser");
+
+    if (!token || !role) {
       navigate("/admin");
       return;
     }
@@ -2467,11 +2622,18 @@ const AdminDashboard = () => {
   }, [navigate]);
 
   const handleLogout = () => {
-    localStorage.removeItem("adminAuth");
-    localStorage.removeItem("adminRole");
-    localStorage.removeItem("adminEmail");
+    localStorage.removeItem("adminToken");
+    localStorage.removeItem("adminRole"); 
+    localStorage.removeItem("adminUser");
     navigate("/admin");
   };
+
+  // const handleLogout = () => {
+  //   localStorage.removeItem("adminAuth");
+  //   localStorage.removeItem("adminRole");
+  //   localStorage.removeItem("adminEmail");
+  //   navigate("/admin");
+  // };
 
   if (!user) {
     return (
@@ -2483,27 +2645,40 @@ const AdminDashboard = () => {
 
   const getRoleDisplayName = (role: string) => {
     switch (role) {
-      case "super_admin": return "Super Admin";
-      case "match_scorer": return "Match Scorer";
-      case "team_manager": return "Team Manager";
-      default: return role;
+      case "super_admin":
+        return "Super Admin";
+      case "match_scorer":
+        return "Match Scorer";
+      case "team_manager":
+        return "Team Manager";
+      default:
+        return role;
     }
   };
 
   const getRoleBadgeVariant = (role: string) => {
     switch (role) {
-      case "super_admin": return "default";
-      case "match_scorer": return "secondary";
-      case "team_manager": return "outline";
-      default: return "outline";
+      case "super_admin":
+        return "default";
+      case "match_scorer":
+        return "secondary";
+      case "team_manager":
+        return "outline";
+      default:
+        return "outline";
     }
   };
 
-  const canAccessApplications = user.role === "super_admin" || user.role === "team_manager";
+  const canAccessApplications =
+    user.role === "superadmin" || user.role === "team_manager";
 
   return (
     <main className="min-h-screen bg-background">
-      <SEO title="Applications" description="TNGSS Cricket League Participation Register" canonical="/admin/applications" />
+      <SEO
+        title="Applications"
+        description="TNGSS Cricket League Participation Register"
+        canonical="/admin/applications"
+      />
 
       {/* Header */}
       <header className="border-b bg-card">
@@ -2511,11 +2686,13 @@ const AdminDashboard = () => {
           <div className="flex items-center justify-between">
             <div>
               <h1 className="text-2xl font-bold">Applications</h1>
-              <p className="text-muted-foreground">Participation register (read-only)</p>
+              <p className="text-muted-foreground">
+                Participation register (read-only)
+              </p>
             </div>
             <div className="flex items-center gap-4">
               <div className="text-right">
-                <p className="text-sm font-medium">{user.email}</p>
+                {/* <p className="text-sm font-medium">{user.}</p> */}
                 <Badge variant={getRoleBadgeVariant(user.role)}>
                   {getRoleDisplayName(user.role)}
                 </Badge>

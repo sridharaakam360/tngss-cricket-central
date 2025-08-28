@@ -57,7 +57,6 @@
 
 // export default App;
 
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -77,6 +76,7 @@ import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/AdminDashboard";
 import Register from "./pages/Register";
 import RegistrationForm from "./components/forms/RegistrationForm";
+import ProtectedRoute from "./components/auth/ProtectedRoute";
 
 const Live = lazy(() => import("./pages/Live"));
 const LiveMatch = lazy(() => import("./pages/LiveMatch"));
@@ -91,7 +91,13 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Header />
-        <Suspense fallback={<div className="container max-w-[1200px] mx-auto py-10">Loading…</div>}>
+        <Suspense
+          fallback={
+            <div className="container max-w-[1200px] mx-auto py-10">
+              Loading…
+            </div>
+          }
+        >
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/event-launch" element={<EventLaunch />} />
@@ -103,9 +109,16 @@ const App = () => (
             <Route path="/points" element={<Points />} />
             <Route path="/gallery" element={<Gallery />} /> */}
             <Route path="/admin" element={<AdminLogin />} />
-            <Route path="/admin/dashboard" element={<AdminDashboard />} /> 
-            <Route path="/admin/dashboard" element={<AdminDashboard />} />
-            <Route path="/register" element={<RegistrationForm/>}/>
+            {/* <Route path="/admin/dashboard" element={<AdminDashboard />} />  */}
+            <Route
+              path="/admin/dashboard"
+              element={
+                <ProtectedRoute>
+                  <AdminDashboard />
+                </ProtectedRoute>
+              }
+            />
+            <Route path="/register" element={<RegistrationForm />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
