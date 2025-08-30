@@ -10,7 +10,7 @@ const Index = () => {
   const partners = [
     { name: "StartupTN", logo: "/brandLogo/White Horizonta.png" },
     { name: "Aakam360", logo: "/brandLogo/aakam.png" },
-    { name: "Aakam Shine", logo: "/events/6.png" },
+    { name: "Aakam Shine", logo: "/brandLogo/shine_logo.png" },
     { name: "SSEI", logo: "/brandLogo/s.png" },
   ];
 

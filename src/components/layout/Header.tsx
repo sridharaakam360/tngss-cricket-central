@@ -1,6 +1,10 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from "@/assets/3.png";
-import logo1 from "@/assets/1.png";
+import logo1 from "@/assets/7.png";
+import logo2 from "@/assets/gss_logo.png";
+
+
+
 const navItems = [
   { to: "/", label: "Home" },  
   { to: "/event-launch", label: "Event Launch" },
@@ -16,16 +20,14 @@ const Header = () => {
   return (
     <header className="border-b border-border bg-background/95 backdrop-blur-sm sticky top-0 z-50">
       <div className="container max-w-[1200px] mx-auto flex items-center justify-between py-4">
-        {/* <Link to="/" className="flex items-center gap-3 font-bold text-xl tracking-tight text-foreground hover:text-primary transition-colors">
-          <img 
-            src={logo} 
-            alt="TNGSS Cricket Central Logo" 
-            className="h-10 w-auto"
-          />
-        </Link> */}
         <Link to="/" className="flex items-center gap-3 font-bold text-xl tracking-tight text-foreground hover:text-primary transition-colors">
           <img 
             src={logo1} 
+            alt="TNGSS Cricket Central Logo" 
+            className="h-10 w-auto"
+          />
+          <img 
+            src={logo2} 
             alt="TNGSS Cricket Central Logo" 
             className="h-10 w-auto"
           />
