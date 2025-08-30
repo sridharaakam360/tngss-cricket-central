@@ -101,9 +101,10 @@ const App = () => (
             <Route path="/live" element={<Live />} />
             <Route path="/live/:matchId" element={<LiveMatch />} />
             <Route path="/points" element={<Points />} />
-            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/gallery" element={<Gallery />} /> */}
             <Route path="/admin" element={<AdminLogin />} />
-            <Route path="/admin/dashboard" element={<AdminDashboard />} />  */}
+            <Route path="/admin/dashboard" element={<AdminDashboard />} /> 
+            <Route path="/admin/dashboard" element={<AdminDashboard />} />
             <Route path="/register" element={<RegistrationForm/>}/>
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
